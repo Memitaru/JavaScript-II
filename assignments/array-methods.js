@@ -97,6 +97,32 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 
+// Giving a special pin to people who donated over 250. Figure out how to give pins too.
+
+const bigDonations = runners.filter(runner => {
+    if (runner.donation >= 250) {
+        return true;
+    }
+})
+
+console.log(bigDonations);
+
 // Problem 2
 
+// Create a list of emails to send the newsletter to
+
+const emailList = [];
+
+runners.forEach(function(runner){
+    emailList.push(runner.email);
+})
+
+console.log(emailList);
+
 // Problem 3
+
+// List all id and names for member list
+
+runners.forEach(function(runner){
+    console.log(`${runner.id}: ${runner.first_name} ${runner.last_name}`)
+})
