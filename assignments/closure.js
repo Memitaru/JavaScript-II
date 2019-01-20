@@ -2,10 +2,21 @@
 // Write a simple closure of your own creation.  Keep it simple!
 
 
+
+
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
+  let x=0;
+  return() => (++x);
 };
+
+const newCounter = counter();
+
+console.log(newCounter());
+console.log(newCounter());
+
+
 // Example usage: const newCounter = counter();
 // newCounter(); // 1
 // newCounter(); // 2
